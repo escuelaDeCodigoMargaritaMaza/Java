@@ -1,0 +1,7 @@
+1-Haz un programa que calcule el área de un triangulo.
+
+      tu código aqui
+      
+2-Un alumno tiene las siguientes notas en los exámenes: 5.25, 7.85, 3.4 Calcula cual es la media de este trimestre. A parte todos los alumnos reciben 1 punto mas a la media por un trabajo que hicieron, muestra por pantalla su nota final.
+
+      tu código aqui
