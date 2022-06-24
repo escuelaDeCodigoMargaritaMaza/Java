@@ -3,8 +3,6 @@ Dentro de HolaMundo.java, teníamos una clase (class):
     public class HolaMundo{
     }
 
-Hablaremos más sobre las clases en el futuro, pero por ahora piense en ellas como un
-solo concepto.
 
 Marcamos el dominio de este concepto usando llaves: {}. La sintaxis dentro de las llaves
 es parte de la clase.
