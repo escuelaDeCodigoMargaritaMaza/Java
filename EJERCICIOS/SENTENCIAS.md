@@ -10,7 +10,7 @@
   
      tu código aqui
   
-4. Mostrar las tablas de multiplicar del 1 al 5
+4. Mostrar las tablas de multiplicar del número que ingrese el usuario
   
-     tu codigo aqui
+       tu codigo aqui
   
