@@ -23,10 +23,15 @@ traducido a un lenguaje que la computadora entiende. (Valor 1 punto)
 3. El siguiente código se ejecutará sin error. (Valor 1 punto)
 
 public class LanguagesFacts{
+
   public static void main(String[] args){
-    System.out.println("Las clases Java tienen un método 'main()'.")
-    System.out.println("Las declaraciones de Java terminan con un punto y coma.");
+  
+  System.out.println("Las clases Java tienen un método 'main()'.")
+
+  System.out.println("Las declaraciones de Java terminan con un punto y coma.");
+
   }
+  
 }
 
         a. Cierto
@@ -35,9 +40,13 @@ public class LanguagesFacts{
 4. ¿Qué imprimirá el siguiente código en la pantalla? (Valor 1 punto)
 
 public class HelloYou{
+
   public static void main(String[] args){
-    System.out.println("¡Hola amigo!");
+  
+   System.out.println("¡Hola amigo!");
+    
   }
+  
 }
 
         a. ¡Hola amigo!
@@ -48,7 +57,9 @@ public class HelloYou{
 5. ¿Qué le falta a este programa en Java? (Valor 1 punto)
 
 public class HechosLenguaje{
+
   // Cubre la historia del lenguaje de programación Java.
+  
 }
 
           a. Las llaves que marcan el alcance de la clase.
@@ -60,9 +71,13 @@ public class HechosLenguaje{
 6. ¿Cuál sería el nombre del archivo si contuviera el siguiente código? (Valor 1 punto)
 
 public class HolaMundo{
+
   public static void main(String[] args){
-    System.out.println("¡Hola Mundo!");
+  
+   System.out.println("¡Hola Mundo!");
+    
   }
+  
 }
 
           a. HolaMundo.java
@@ -85,9 +100,13 @@ Salida:
 que se llama LasEscondidas.java. (Valor 2 puntos)
 
 public class LasEscondidas {
+
   public static void main(String[] args) {
-    System.out.println("Juguemos a las escondidas.");
+  
+   System.out.println("Juguemos a las escondidas.");
+    
   }
+  
 }
 
           a. Debajo de la declaración de impresión System.out.println("Juguemos a las
@@ -131,6 +150,7 @@ creó Java mientras trabajaba en Sun Microsystems.
 
 ¡Su número favorito es la raíz cuadrada de 2!
 de tal manera que puedas ver impreso el mensaje: ¡Eres un lenguaje divertido!
+
 c. Escribe la salida del programa.
 
 
@@ -142,11 +162,13 @@ a. Define una clase pública (public class) denominada Evaluacion. Usa llaves
 de apertura y cierre para determinar el alcance de la clase (class).
 
 b. Define el método main() dentro de las llaves de la clase (class) Evaluacion.
+
 c. Dentro de las llaves para el método main(), escribe
 
 El método main ejecuta las tareas de la clase
 
 como un comentario de una sola línea.
+
 d. Debajo del comentario, escribe una declaración que imprima lo siguiente:
 
 
