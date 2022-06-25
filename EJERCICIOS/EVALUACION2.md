@@ -65,17 +65,17 @@ un número entero? (Valor 1 punto)
 definido algunas variables relacionadas a James Gosling, el creador de Java como
 se muestra a continuación: (Valor 2 puntos)
 
-public class Creator {
+                    public class Creator {
 
-  public static void main(String[] args) {
+                      public static void main(String[] args) {
 
-   String nombre = "James Gosling";
+                       String nombre = "James Gosling";
 
-   int yearCreado = 1995;
+                       int yearCreado = 1995;
 
-  }
+                      }
 
-}
+                    }
 
 a. Dentro de main(), use System.out.println() para imprimir la variable
 nombre.
@@ -92,16 +92,16 @@ c. Escribe la salida.
 9. Supón que tienes un programa llamado ContComentarios.java y dentro de este
 tenemos el siguiente código definido: (Valor 2 puntos)
 
-      //Esta es la declaración de la clase
-      public class ContComentarios {
-        //Este es el método main que se ejecuta cuando compilas
-        public static void main(String[] args) {
-          //Aquí es donde vas a definir tu variable
-          //Aquí es donde vas a imprimir tu variable
-          }
-          //Este es el final de la class
-        }
-      //Esto está afuera de la clase
+                //Esta es la declaración de la clase
+                public class ContComentarios {
+                  //Este es el método main que se ejecuta cuando compilas
+                  public static void main(String[] args) {
+                    //Aquí es donde vas a definir tu variable
+                    //Aquí es donde vas a imprimir tu variable
+                    }
+                    //Este es el final de la class
+                  }
+                //Esto está afuera de la clase
 
 El archivo ContComentarios.java tiene varios comentarios.
 
@@ -119,11 +119,11 @@ c. Escribe la salida.
 10. Considera el código del siguiente programa escrito en Java cuyo nombre del
 archivo es CuotaMercado.java: (Valor 2 puntos)
 
-    public class CuotaMercado {
-      public static void main(String[] args) {
-      }
-    }
-    
+              public class CuotaMercado {
+                public static void main(String[] args) {
+                }
+              }
+
 Al año 2022, Android tiene el 70.97 por ciento de la cuota de mercado de los sistemas
 operativos móviles.
 
@@ -134,16 +134,16 @@ b. Imprime en valor de androidShare en la consola.
 
 c. Escribe la salida.
 
-      Salida:
-      70.97
+                Salida:
+                70.97
 
 11. Considera el código del siguiente programa escrito en Java cuyo nombre del
 archivo es Booleans.java: (Valor 2 puntos)
 
-    public class Booleans {
-      public static void main(String[] args) {
-      }
-    }
+              public class Booleans {
+                public static void main(String[] args) {
+                }
+              }
 
 a. Crea una variable llamada intsPuedeAlmacenarDecimales. Ponlo en verdadero
 (True) si el tipo int puede contener un número decimal. Ponlo en falso (false) si el
@@ -153,16 +153,16 @@ b. Imprime la variable intsPuedeAlmacenarDecimales.
 
 c. Escribe la salida.
 
-      Salida:
-      70.97
+                Salida:
+                70.97
 
 12. Considera el código del siguiente programa escrito en Java cuyo nombre del
 archivo es Char.java: (Valor 2 puntos)
 
-    public class Char {
-      public static void main(String[] args) {
-      }
-    }
+              public class Char {
+                public static void main(String[] args) {
+                }
+              }
     
 a. Escribe como comentario de una sola línea tu nombre
 
@@ -174,16 +174,16 @@ c. Imprime en la terminal el valor de la variable primerLetra.
 d. Escribe la salida.
 
 
-      Salida:
-      M
+                Salida:
+                M
 
 13. Considera el código del siguiente programa escrito en Java cuyo nombre del
 archivo es Poema.java: (Valor 2 puntos)
 
-    public class Poema {
-      public static void main(String[] args) {
-      }
-    }
+              public class Poema {
+                public static void main(String[] args) {
+                }
+              }
     
 a. Crea una variable llamada verso de tipo string y almacena ahí el verso “Aquí no
 suceden cosas de mayor trascendencia que las rosas.”.
@@ -193,17 +193,17 @@ b. Invoca System.out.println() para imprimir el valor de la variable verso.
 c. Escribe la salida.
 
 
-      Salida:
-      Aquí no suceden cosas de mayor trascendencia que las rosas.
+                Salida:
+                Aquí no suceden cosas de mayor trascendencia que las rosas.
 
 14. Considera el código del siguiente programa escrito en Java cuyo nombre del
 archivo es MiPerfil.java: (Valor 3 puntos)
 
-    public class MyProfile {
-      public static void main(String[] args) {
+              public class MyProfile {
+                public static void main(String[] args) {
 
-      }
-    }
+                }
+              }
     
 El archivo MiPerfil.java contiene una clase que representa tu perfil de contratación que
 se presentará a potenciales empleadores.
@@ -228,9 +228,9 @@ f. Iimprime el valor de cada una de las variables, una por cada línea.
 g. Escribe la salida.
 
 
-    Salida:
-    Mi Nombre
-    22
-    500000.01
-    n
-    true
+              Salida:
+              Mi Nombre
+              22
+              500000.01
+              n
+              true
