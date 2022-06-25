@@ -72,17 +72,10 @@ public class HolaMundo{
 7. Completa la clase HolaTu del programa HolaTu.java, para que imprima “¡Hola
 Mi_Nombre!” donde “Mi_Nombre” sea tú nombre. (Valor 2 punto)
 
-public class HolaTu {
-  public static void main(String[] args) {
-  }
-  }
-
-  Respuesta:
-  public class HolaTu {
-  public static void main(String[] args) {
-  System.out.println("¡Hola  ́nombre_del_programador ́!");
-  }
-}
+        public class HolaTu {
+          public static void main(String[] args) {
+          }
+          }
 
 Salida:
 ¡Hola  ́nombre_del_programador ́!!
