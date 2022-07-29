@@ -19,36 +19,35 @@ clara, según corresponda.
 2. Una pila aplica el concepto de LIFO (Last in, first out) – Últimos en entrar, primeros
 en salir. (Valor 1 punto)
 
-      a. Verdadero
-      b. Falso
+              a. Verdadero
+              b. Falso
 
 
 3. Una operación “Push”, sin importar el tipo de datos, refiere al procedimiento que
 permite la inserción de un nuevo elemento. (Valor 1 punto)
 
-      a. Verdadero
-      b. Falso
+              a. Verdadero
+              b. Falso
 
 4. Se tiene la siguiente lista con 6 elementos, teniendo en cuenta que es una cola
 contesta lo siguiente: (Valor 1 punto)
 
-a. ¿Cuál fue el último elemento en entrar?
-
-b. ¿Cuál fue el último elemento en salir?
+                a. ¿Cuál fue el último elemento en entrar?
+                b. ¿Cuál fue el último elemento en salir?
 
 ![image](https://user-images.githubusercontent.com/91554777/181845862-efa0809c-fa14-4a0b-a6c5-d6b042618992.png)
 
 5. ¿Qué método se utiliza para agregar un elemento a la pila? (Valor 1 punto)
 
-        a. pop()
-        b. push()
-        c. dequeue()
+                a. pop()
+                b. push()
+                c. dequeue()
 
 6. ¿Qué método se utiliza para eliminar un elemento de la pila? (Valor 1 punto)
 
-        a. pop()
-        b. push()
-        c. enqueue()
+                a. pop()
+                b. push()
+                c. enqueue()
 
 
 7. Determina el resultado de la siguiente pila ejecutando las siguientes instrucciones:
@@ -70,4 +69,4 @@ d. Finalmente, crea un bucle condicional donde mientras la pila no esté vacía,
 imprimas la camisa que se está sacando.
 
 
-        Tu código aqui
+           Tu código aqui
