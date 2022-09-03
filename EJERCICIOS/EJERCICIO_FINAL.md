@@ -67,9 +67,32 @@ INICIAMOS CREANDO EL FRAME, LA PARTE GRÁFICA
                 }
 
                 private void initBotones(){
+                     for (int i = 0; i < numBotones; i++){
+                                    botones[i] = new JButton(textoBotones[i]); //Inicializo JButton
+                                    int size = (i == 0) ? 24 : 16; //EL botón de Resultado tendrá un tamaño de fuente menor que todos los demás
+                                    int ancho = (i == 0) ? 245 : anchoBoton; //EL botón de Resultado será más ancho que todos los demás
+
+                                    botones[i].setBounds(xBotones[i],yBotones[i],ancho,altoBoton
+                                    ); //Posición y dimensiones
+                                    botones[i].setFont(new Font("MONOSPACED",PLAIN,size));
+                                    //Fuente
+                                    botones[i].setOpaque(true); //Para poder darle un color de fondo
+                                    botones[i].setFocusPainted(false); //Para que no salga una recuadro azul cuando tenga el foco
+                                    botones[i].setBackground(Color.DARK_GRAY); //Color de fondo
+                                    botones[i].setForeground(Color.WHITE); //Color de fuente
+                                    botones[i].setBorder(new LineBorder(Color.DARK_GRAY));
+                                    //Borde
+                                    add(botones[i]); //Añado el JButton al JFrame
+                    }
 
                 }
                 private void initPantalla() {
+                    setLayout(null); //Layout absoluto
+                    setTitle("Calculadora"); //Título del JFrame
+                    setSize(290, 455); //Dimensiones del JFrame
+                    setResizable(false); //No redimensionable
+                    setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //Cerrar proceso al cerrar ventana getContentPane().setBackground(Color.BLACK); //Color de fondo
+                    setVisible(true); //Mostrar JFrame
 
                 }
                 private void eventosNumeros() {
