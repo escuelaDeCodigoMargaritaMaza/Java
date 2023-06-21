@@ -106,6 +106,90 @@ for (int j = 0; j < columnas; j++) {
 
 
 
+
+SOLUCION:
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+
+/**
+ *
+ * @author Usuario
+ */
+import java.util.Scanner;
+
+public class Resumen1{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int filas = 4;
+
+        
+        int columnas = 4;
+
+        int[][] matriz = new int[filas][columnas];
+
+        // Llenar la matriz con valores ingresados por el usuario
+        for (int i = 0; i < filas; i++) {
+            for (int j = 0; j < columnas; j++) {
+                System.out.print("Ingrese el elemento [" + i + "][" + j + "]: ");
+                matriz[i][j] = sc.nextInt();
+            }
+        }
+
+        System.out.println("La matriz ingresada es:");
+        for (int i = 0; i < filas; i++) {
+            for (int j = 0; j < columnas; j++) {
+                System.out.print(matriz[i][j] + " ");
+            }
+            System.out.println();
+        }
+
+        // Realizar una operación en la matriz según la opción del usuario
+        int opcion;
+        do {
+            System.out.println("\nElija una operación:");
+            System.out.println("1. Calcular la suma de los elementos");
+            System.out.println("2. Calcular el promedio de los elementos");
+            System.out.println("3. Salir");
+            System.out.print("Opción: ");
+            opcion = sc.nextInt();
+
+            switch (opcion) {
+                case 1:
+                    int suma = 0;
+                    for (int i = 0; i < filas; i++) {
+                        for (int j = 0; j < columnas; j++) {
+                            suma += matriz[i][j];
+                        }
+                    }
+                    System.out.println("La suma de los elementos es: " + suma);
+                    break;
+                case 2:
+                    int totalElementos = filas * columnas;
+                    int sumaTotal = 0;
+                    for (int i = 0; i < filas; i++) {
+                        for (int j = 0; j < columnas; j++) {
+                            sumaTotal += matriz[i][j];
+                        }
+                    }
+                    double promedio = (double) sumaTotal / totalElementos;
+                    System.out.println("El promedio de los elementos es: " + promedio);
+                    break;
+                case 3:
+                    System.out.println("¡Hasta luego!");
+                    break;
+                default:
+                    System.out.println("Opción inválida. Intente nuevamente.");
+                    break;
+            }
+        } while (opcion != 3);
+    }
+
+   
+}
+
                 
 
 
