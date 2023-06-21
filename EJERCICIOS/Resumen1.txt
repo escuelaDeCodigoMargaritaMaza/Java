@@ -1,0 +1,114 @@
+System.out.println("\nElija una operación:");
+System.out.println("1. Calcular la suma de los elementos");
+System.out.println("2. Calcular el promedio de los elementos");
+System.out.println("3. Salir");
+System.out.print("Opción: ");
+System.out.println("La matriz ingresada es:");
+System.out.println();
+System.out.println("La suma de los elementos es: " + suma);
+System.out.println("El promedio de los elementos es: " + promedio);
+System.out.println("Opción inválida. Intente nuevamente.");
+System.out.println("¡Hasta luego!");
+
+__________________________________________________________________________________________________________________________________________________________
+
+break;
+break;
+break;
+
+
+__________________________________________________________________________________________________________________________________________________________
+
+double promedio = (double) sumaTotal / totalElementos;
+int sumaTotal = 0;
+int suma = 0;
+int totalElementos = filas * columnas;
+opcion = sc.nextInt();
+Scanner sc = new Scanner(System.in);
+int filas = 4;       
+int columnas = 4;
+int[][] matriz = new int[filas][columnas];
+
+_________________________________________________________________________________________________________________________________________________________
+
+
+public class Resumen1{
+    
+}
+
+
+public static void main(String[] args) {
+        
+}
+
+
+
+
+for (int i = 0; i < filas; i++) {
+            
+}
+
+for (int j = 0; j < columnas; j++) {
+                System.out.print("Ingrese el elemento [" + i + "][" + j + "]: ");
+                matriz[i][j] = sc.nextInt();
+}
+
+
+for (int i = 0; i < filas; i++) {
+                        
+}
+
+
+for (int i = 0; i < filas; i++) {
+
+}
+
+
+for (int j = 0; j < columnas; j++) {
+  suma += matriz[i][j];
+}
+
+
+for (int j = 0; j < columnas; j++) {
+      System.out.print(matriz[i][j] + " ");
+ }
+
+
+import java.util.Scanner;
+
+do {
+            
+} while (opcion != 3);
+
+
+ 
+
+switch (opcion) {
+	case 1:
+	case 2:
+	case 3:
+	default:
+               
+}
+
+
+               
+
+for (int i = 0; i < filas; i++) {
+                        
+}
+
+               
+
+for (int j = 0; j < columnas; j++) {
+   sumaTotal += matriz[i][j];
+}
+
+
+
+                
+
+
+                
+
+ 
