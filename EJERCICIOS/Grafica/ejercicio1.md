@@ -57,7 +57,6 @@ demas elementos
     private JButton boton1;
     private JButton boton2;
     private JTextField cajatexto3;
- 
 
 
     public Graf(){
@@ -90,6 +89,8 @@ demas elementos
         boton2 = new JButton("borrar");
         boton2.setBounds(150,200,100,30);
         add(boton2);
+
+        
     }
 
   
@@ -104,3 +105,23 @@ demas elementos
         
      }
     }
+
+FUNCIONALIDAD
+
+      import java.awt.event.*;   
+      public class CajaTexto extends JFrame implements ActionListener
+      boton1.addActionListener(this);   //funcionalidad al boton 1
+      boton2.addActionListener(this);   //funcionalidad añ boton 2
+
+      public void actionPerformed(ActionEvent evento){
+        if(evento.getSource()==boton1){
+            String nombre = cajatexto1.getText();
+            String apellido = cajatexto2.getText();
+            cajatexto1.setText(nombre +" "+ apellido);
+            
+        }
+         if(evento.getSource()==boton2){
+            cajatexto1.setText("");
+            cajatexto1.setText("");
+            cajatexto3.setText("");
+        }
