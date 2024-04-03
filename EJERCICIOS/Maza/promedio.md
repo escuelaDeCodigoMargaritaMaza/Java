@@ -51,4 +51,35 @@
           }
 
 
+
+# VERSION 2
+
+	class Promedio{
+	    public static void main (String args[]){
+		String nombre;
+	  	double cal1,cal2,cal3,cal4,promedio;
+	    	char grupo;
+	    	int edad;
+	    	boolean aprobo;
 	
+	  	//ASIGNO VALOR A LA VARIBLE
+	  	nombre="Juan";
+	  	cal1=7.5;
+	  	cal2=5.6;
+	  	cal3=8.9;
+	  	cal4=7.4;
+	    	promedio=(cal1+cal2+cal3+cal4)/ 4;
+	        grupo='a';
+	        edad=10;
+	    	aprobo=promedio>6;
+	
+	  	System.out.println("Datos del alumno: \n--------------------------------------------\nNombre    Edad     grupo    Promedio    Aprobado\n -----------------------------------------\n" + nombre + "        " + edad + "        "+ grupo+ "        " +promedio+ "        "+aprobo);
+	    
+		
+		
+	  
+	 
+	
+	
+	 }
+	}
