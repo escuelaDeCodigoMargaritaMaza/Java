@@ -663,6 +663,10 @@
 	    System.out.println("Deseas calcular el promedio de otro alumno SI/NO");
 	    repetir = entrada.nextLine();
 	    System.out.println(repetir);
+
+            //reestablecer promedio
+	    promedio=0;
+     
 	  }
 	  System.out.println("==========================================\nHasta luego\n===================================");
 	}
