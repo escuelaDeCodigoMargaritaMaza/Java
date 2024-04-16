@@ -503,11 +503,17 @@
 	  char grupo;
 	  int edad;
 	  boolean aprobo;
+	
+	  //aqui deben de ir para evitar se reinicien en el while
+	  double alta = 0,baja = 10;
+	  String nombreAlto= "" ,nombreBajo = "";
+	
+	
 	  //variable de clase
 	  Scanner entrada =  new Scanner(System.in);
 	
 	
-	  while(repetir != "no"){   
+	  while(!repetir.equalsIgnoreCase("no")){   
 	   
 	    //ASIGNO VALOR A LA VARIBLE
 	    System.out.println("Ingresa el nombre del alumno");
@@ -639,10 +645,7 @@
 	
 	
 	    //calificacion alta y baja
-	    double alta = 0,baja;
-	    String nombreAlto= nombre ,nombreBajo = nombre;
-	
-	    baja = promedio;
+	    
 	
 	    if (promedio > alta) {
 	      alta =promedio;
