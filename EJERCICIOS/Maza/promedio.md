@@ -675,33 +675,34 @@
 
 # VERSION 8
 
-		import java.util.Scanner;
-		class Promedio{
-		  public static void main (String args[]){
-		    String[] nombres = new String[4];
-		    double[] promedios = new double[4];
-		    Scanner sc = new Scanner(System.in);
-		    double cal,promedio = 0;
-		
-		    for(int i = 0;i < 4;i++){
-		      System.out.println("ingresa nombre alumno " + i+1);
-		      nombres[i] = sc.nextLine();
-		      for(int j=0;j<4;j++){
-		        System.out.println("ingresa cal "+j +" de " + nombres[i]);
-		        cal = sc.nextDouble();
-		        sc.nextLine();
-		        promedio = promedio + cal;
-		
-		
-		      }
-		      promedio = promedio / 4;
-		      promedios[i] = promedio;
-		      
-		    }
-		
-		    for(int i = 0; i< 4; i++){
-		      System.out.println(nombres[i] + promedios[i]);
-		    }
-		
-		 }
-		}
+	import java.util.Scanner;
+	class Promedio{
+	  public static void main (String args[]){
+	    String[] nombres = new String[4];
+	    double[] promedios = new double[4];
+	    Scanner sc = new Scanner(System.in);
+	    double cal,promedio = 0;
+	
+	    for(int i = 0;i < 4;i++){
+	      System.out.println("ingresa nombre alumno " + i+1);
+	      nombres[i] = sc.nextLine();
+	      for(int j=0;j<4;j++){
+	        System.out.println("ingresa cal "+j +" de " + nombres[i]);
+	        cal = sc.nextDouble();
+	        sc.nextLine();
+	        promedio = promedio + cal;
+	
+	
+	      }
+	      promedio = promedio / 4;
+	      promedios[i] = promedio;
+	      promedio = 0;
+	      
+	    }
+	
+	    for(int i = 0; i< 4; i++){
+	      System.out.println(nombres[i] + promedios[i]);
+	    }
+	
+	 }
+	}
