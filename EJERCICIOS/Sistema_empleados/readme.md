@@ -131,3 +131,37 @@ https://docs.google.com/presentation/d/1Y-wQsRD0hThXUjCnlHrJI66TEyMuyVHjgdrtBDwR
         JDialog dialogo = emergente.createDialog("Sistema de registro");
         dialogo.setVisible(true);
         dialogo.setAlwaysOnTop(true);
+
+
+## Ventana de consulta
+
+![image](https://github.com/escuelaDeCodigoMargaritaMaza/Java/assets/91554777/159acebd-c382-4f3a-8065-e50bb98009b8)
+
+## Instancia de ventana consulta
+
+        Consulta consulta = new Consulta();
+        consulta.setVisible(true);
+        consulta.setTitle("Consulta y modificación de empleados");
+        consulta.setLocationRelativeTo(null);
+        
+## cargar tabla
+
+     DefaultTableModel tabla = new DefaultTableModel(){
+            public boolean isCellEditable(int row,int column){
+                return false;
+            } 
+        };
+        String titulos[]={"folio","nombre","domicilio","telefono","email","fecha de nacimiento","género"};
+        tabla.setColumnIdentifiers(titulos);
+        
+        List<Empleado> listaEmpleados = control.traerEmpleados();
+        
+        if (listaEmpleados != null) {
+            for (Empleado empl : listaEmpleados) {
+                Object[] objeto ={empl.getNumeroEmpleado(),empl.getEmail(),empl.getDireccion(),empl.getTelefono(),empl.getEmail(),empl.getNacimiento(),empl.getGenero()};
+                tabla.addRow(objeto);
+            }
+            
+        }
+    }
+
