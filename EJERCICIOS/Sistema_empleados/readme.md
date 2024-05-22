@@ -123,3 +123,11 @@ https://docs.google.com/presentation/d/1Y-wQsRD0hThXUjCnlHrJI66TEyMuyVHjgdrtBDwR
               }
               
           }
+
+## Mensaje de guardado
+
+        JOptionPane emergente = new JOptionPane("Guardado exitoso");
+        emergente.setMessageType(JOptionPane.INFORMATION_MESSAGE);
+        JDialog dialogo = emergente.createDialog("Sistema de registro");
+        dialogo.setVisible(true);
+        dialogo.setAlwaysOnTop(true);
