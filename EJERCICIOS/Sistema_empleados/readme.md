@@ -154,14 +154,21 @@ https://docs.google.com/presentation/d/1Y-wQsRD0hThXUjCnlHrJI66TEyMuyVHjgdrtBDwR
         String titulos[]={"folio","nombre","domicilio","telefono","email","fecha de nacimiento","género"};
         tabla.setColumnIdentifiers(titulos);
         
-        List<Empleado> listaEmpleados = control.traerEmpleados();
-        
-        if (listaEmpleados != null) {
-            for (Empleado empl : listaEmpleados) {
-                Object[] objeto ={empl.getNumeroEmpleado(),empl.getEmail(),empl.getDireccion(),empl.getTelefono(),empl.getEmail(),empl.getNacimiento(),empl.getGenero()};
-                tabla.addRow(objeto);
-            }
-            
-        }
-    }
 
+segunda parte
+
+         List<Empleado> listaEmpleados = control.traerEmpleados();
+              
+              if (listaEmpleados != null) {
+                  for (Empleado empl : listaEmpleados) {
+                      Object[] objeto ={empl.getNumeroEmpleado(),empl.getEmail(),empl.getDireccion(),empl.getTelefono(),empl.getEmail(),empl.getNacimiento(),empl.getGenero()};
+                      tabla.addRow(objeto);
+                  }
+                  
+              }
+          }
+
+
+## DELETE
+
+  
