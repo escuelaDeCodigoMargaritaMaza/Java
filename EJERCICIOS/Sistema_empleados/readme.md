@@ -171,14 +171,14 @@ segunda parte
 
 ## DELETE
 
-         if(tablaUsuarios.getRowCount() > 0){
+         if(tablaempleado.getRowCount() > 0){
             //controla que haya seleccionado algo
-            if(tablaUsuarios.getSelectedRow() != -1){
+            if(tablaempleado.getSelectedRow() != -1){
                 //que traiga el valor de la columna seleccionada
-                int num_usua = Integer.parseInt(String.valueOf(tablaUsuarios.getValueAt(tablaUsuarios.getSelectedRow(),0)));
+                int num_emp = Integer.parseInt(String.valueOf(tablaempleado.getValueAt(tablaempleado.getSelectedRow(),0)));
                 
                 //creamos el metodo y la ventana de alerta de que se elimino el usuario
-                control.borrarUsuario(num_usua);
+                control.borrarEmpleado(num_emp);
                 
                 //ventana de borrado
                 JOptionPane optionPane = new JOptionPane("Usuario eliminado");
