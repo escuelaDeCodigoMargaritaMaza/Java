@@ -171,4 +171,37 @@ segunda parte
 
 ## DELETE
 
+         if(tablaUsuarios.getRowCount() > 0){
+            //controla que haya seleccionado algo
+            if(tablaUsuarios.getSelectedRow() != -1){
+                //que traiga el valor de la columna seleccionada
+                int num_usua = Integer.parseInt(String.valueOf(tablaUsuarios.getValueAt(tablaUsuarios.getSelectedRow(),0)));
+                
+                //creamos el metodo y la ventana de alerta de que se elimino el usuario
+                control.borrarUsuario(num_usua);
+                
+                //ventana de borrado
+                JOptionPane optionPane = new JOptionPane("Usuario eliminado");
+                optionPane.setMessageType(JOptionPane.INFORMATION_MESSAGE);
+                JDialog dialog = optionPane.createDialog("Eliminar usuario");   
+                dialog.setAlwaysOnTop(true);
+                dialog.setVisible(true);
+
+                //OPTIMIZAR LOS MENSAJES CON UN METODO PARA CONSIDERAR EL ERROR Y QUE ESTE VACIA
+                //VER VIDEO
+
+            }else{
+                JOptionPane optionPane = new JOptionPane("no seleccionaste usuario");
+                optionPane.setMessageType(JOptionPane.INFORMATION_MESSAGE);
+                JDialog dialog = optionPane.createDialog("Eliminar usuario");   
+                dialog.setAlwaysOnTop(true);
+                dialog.setVisible(true);
+            }
+        }else{
+            JOptionPane optionPane = new JOptionPane("No hay nada para eliminar");
+                optionPane.setMessageType(JOptionPane.INFORMATION_MESSAGE);
+                JDialog dialog = optionPane.createDialog("Eliminar usuario");   
+                dialog.setAlwaysOnTop(true);
+                dialog.setVisible(true);
+        }
   
