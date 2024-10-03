@@ -101,4 +101,82 @@
          }  
         }
 
+## VERSION 4
+
+            package com.mycompany.usuari;
+            
+            import java.util.Scanner;
+            
+            public class Usuari{
+                public static void main(String[] args){
+                    //crear variable de clase Scanner
+                    Scanner entrada = new Scanner(System.in);
+            
+                    String nombre;
+                    String apellido;
+                    double cal1;
+                    double cal2;
+                    double cal3;
+                    int asistencias;
+                    boolean inscrito;
+            
+            
+                    System.out.println("Ingresa el nombre del usuario");
+                    nombre = entrada.nextLine();
+            
+                    System.out.println("Ingresa el apellido del usuario");
+                    apellido = entrada.nextLine();
+            
+                    System.out.println("Ingresa la calificación 1");
+                    cal1= entrada.nextDouble();
+                    entrada.nextLine();
+            
+                    System.out.println("Ingresa la calificación 2");
+                    cal2= entrada.nextDouble();
+                    entrada.nextLine();
+            
+                    System.out.println("Ingresa la calificación 3");
+                    cal3= entrada.nextDouble();
+                    entrada.nextLine();
+            
+                    System.out.println("Ingresa el totral de asistencias del usuario");
+                    asistencias = entrada.nextInt();
+                    entrada.nextLine();
+            
+                    String grupo;
+                    System.out.println("Ingresa el grupo del usuario");
+                    grupo = entrada.nextLine();
+            
+                    System.out.println("Estas inscrito en algún grupo? true/false");
+                    inscrito = entrada.nextBoolean();
+                    
+                    String status;
+            
+                    double promedio = (cal1 + cal2 + cal3) / 3;
+                    
+                   	if (asistencias == 10) {
+                        if (promedio < 6){
+                   		status = "Reprobado";
+                        }else if(promedio < 7){
+            		status = "Aprobado";	
+                         }else if(promedio < 8){
+            		status = "Bien";	
+                         }else if(promedio < 9){
+            		status = "Muy bien";	
+                         }else if(promedio <= 10){
+            		status = "Exclente";	
+                         }                
+                    }else{
+                          status = "Reprobado";
+                     }
+                   
+                    System.out.println("");
+                    
+                    System.out.println("fin del programa");
+                   
+             }  
+            }
+
+
+
 
