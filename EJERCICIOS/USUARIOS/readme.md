@@ -177,6 +177,85 @@
              }  
             }
 
+## VERSION 5
+
+        package com.mycompany.usuari;
+        
+        import java.util.Scanner;
+        
+        public class Usuari{
+            public static void main(String[] args){
+                //crear variable de clase Scanner
+                Scanner entrada = new Scanner(System.in);
+        
+                String nombre;
+                String apellido;
+                double cal;
+                int asistencias;
+                boolean inscrito;
+                    
+                String repetir;
+                
+                System.out.println("Quieres calcular otro promedio? si/no");
+                repetir = entrada.nextLine();
+                
+                while(repetir  == "si"){
+                 
+                    System.out.println("Ingresa el nombre del usuario");
+                    nombre = entrada.nextLine();
+        
+                    System.out.println("Ingresa el apellido del usuario");
+                    apellido = entrada.nextLine();
+                    double suma = 0;
+                    for (int i = 0; i < 3; i++) {
+                        System.out.println("Ingresa la calificación " + (i +1));
+                        cal = entrada.nextDouble();
+                        entrada.nextLine();
+                        suma  =  suma + cal;
+                    }
+        
+                    System.out.println("Ingresa el totral de asistencias del usuario");
+                    asistencias = entrada.nextInt();
+                    entrada.nextLine();
+        
+                    String grupo;
+                    System.out.println("Ingresa el grupo del usuario");
+                    grupo = entrada.nextLine();
+        
+                    System.out.println("Estas inscrito en algún grupo? true/false");
+                    inscrito = entrada.nextBoolean();
+        
+                    String status;
+        
+                    double promedio = suma / 3;
+        
+                    if (asistencias == 10) {
+                        if (promedio < 6){
+                            status = "Reprobado";
+                        }else if(promedio < 7){
+                            status = "Aprobado";	
+                         }else if(promedio < 8){
+                            status = "Bien";	
+                         }else if(promedio < 9){
+                            status = "Muy bien";	
+                         }else if(promedio <= 10){
+                            status = "Exclente";	
+                         }                
+                    }else{
+                          status = "Reprobado";
+                     }
+        
+                    System.out.println("");
+                    System.out.println("Quieres calcular otro promedio? si/no");
+                    repetir = entrada.nextLine();
+                    
+                }
+                
+                System.out.println("fin del programa");
+               
+         }  
+        }
+
 
 
 
