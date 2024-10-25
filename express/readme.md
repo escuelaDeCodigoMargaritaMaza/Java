@@ -191,3 +191,83 @@ Abre tu navegador y visita http://localhost:3000
 
 npm install. Este comando se utiliza para instalar todas las dependencias especificadas en el archivo package.json. Esto asegura que todas las bibliotecas y módulos necesarios estén disponibles en tu proyecto. Piensa en ello como comprar todos los ingredientes antes de empezar a cocinar según la receta.
 
+## Conectar a una BD
+
+Instalar el Módulo mysql
+
+Primero, necesitamos instalar el módulo mysql que nos permitirá conectar Node.js con la base de datos MySQL. Ejecuta esto en tu terminal:
+
+        npm install mysql
+
+Configurar la Conexión a la Base de Datos
+
+Actualiza tu archivo app.js para incluir la configuración de la base de datos:
+
+        const express = require('express');
+        const bodyParser = require('body-parser');
+        const path = require('path');
+        const mysql = require('mysql');
+        const Student = require('./Student');
+        
+        const app = express();
+        const students = [];
+        
+        // Configuración de la conexión a la base de datos MySQL
+        const db = mysql.createConnection({
+          host: 'localhost',
+          user: 'tu_usuario',
+          password: 'tu_contraseña',
+          database: 'tu_base_de_datos'
+        });
+        
+        db.connect((err) => {
+          if (err) {
+            console.error('Error al conectar a la base de datos:', err);
+            return;
+          }
+          console.log('Conectado a la base de datos MySQL');
+        });
+        
+        app.use(bodyParser.urlencoded({ extended: false }));
+        app.use(bodyParser.json());
+        app.use(express.static(path.join(__dirname, 'public')));
+        
+        // Ruta para agregar un nuevo estudiante
+        app.post('/students', (req, res) => {
+          const { name, email, average } = req.body;
+          const student = new Student(name, email, average);
+          students.push(student);
+        
+          // Insertar estudiante en la base de datos
+          const query = 'INSERT INTO estudiantes (nombre, correo, promedio) VALUES (?, ?, ?)';
+          db.query(query, [name, email, average], (err, result) => {
+            if (err) {
+              console.error('Error al insertar estudiante en la base de datos:', err);
+              res.status(500).send('Error al registrar el estudiante');
+              return;
+            }
+            res.status(201).send(student.getDetails());
+          });
+        });
+
+        // Iniciar el servidor en el puerto 3000
+        app.listen(3000, () => {
+          console.log('Servidor corriendo en http://localhost:3000');
+        });
+
+Crear la Tabla en MySQL
+
+Abre MySQL Workbench y crea una tabla para almacenar los estudiantes:
+
+        CREATE TABLE estudiantes (
+          id INT AUTO_INCREMENT PRIMARY KEY,
+          nombre VARCHAR(100),
+          correo VARCHAR(100),
+          promedio DECIMAL(3,2)
+        );
+
+Probar la Conexión
+
+        npm start
+
+Abre tu navegador y visita http://localhost:3000.
