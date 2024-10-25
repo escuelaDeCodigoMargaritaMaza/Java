@@ -23,7 +23,7 @@ Crea un archivo app.js y añade el siguiente código:
     // Iniciar el servidor en el puerto 3000
     app.listen(3000, () => {
       console.log('Servidor corriendo en http://localhost:3000');
-});
+    });
 
 Ejecutar el Servidor
 En tu terminal, ejecuta:
