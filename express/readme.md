@@ -113,7 +113,8 @@ En la terminal escribe node app.js
             body: JSON.stringify(data)
           });
           const result = await response.json(); //Espera la respuesta del servidor y la convierte en un objeto JSON.
-          document.getElementById('response').innerHTML = `    //Muestra los datos del estudiante registrado en la página.
+          //Muestra los datos del estudiante registrado en la página.
+          document.getElementById('response').innerHTML = `    
             <p>Nombre: ${result.name}</p>
             <p>Correo: ${result.email}</p>
             <p>Promedio: ${result.average}</p>
