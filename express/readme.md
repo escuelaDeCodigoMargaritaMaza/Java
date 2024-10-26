@@ -131,24 +131,24 @@ Object.fromEntries es un método que convierte una lista de pares clave/valor en
 
 Actualiza app.js
 
-    const express = require('express');
-    const bodyParser = require('body-parser');
-    const path = require('path');
-    const Student = require('./Student');
+    const express = require('express');//Importa el framework Express para crear servidores web.
+    const bodyParser = require('body-parser'); //Middleware para manejar datos del cuerpo de las solicitudes HTTP.
+    const path = require('path'); //Módulo de Node.js para trabajar con rutas de archivos.
+    const Student = require('./Student'); //Importa la clase Student definida en un archivo separado.
     
-    const app = express();
-    const students = [];
+    const app = express();  //Crea una instancia de la aplicación Express.
+    const students = []; //Una lista vacía para almacenar instancias de estudiantes.
     
-    app.use(bodyParser.urlencoded({ extended: false }));
-    app.use(bodyParser.json());
-    app.use(express.static(path.join(__dirname, 'public')));
+    app.use(bodyParser.urlencoded({ extended: false }));  //Configura bodyParser para manejar datos de formularios.
+    app.use(bodyParser.json()); //Configura bodyParser para manejar datos JSON.
+    app.use(express.static(path.join(__dirname, 'public'))); //Configura Express para servir archivos estáticos desde la carpeta public.
     
     // Ruta para agregar un nuevo estudiante
-    app.post('/students', (req, res) => {
-      const { name, email, average } = req.body;
-      const student = new Student(name, email, average);
-      students.push(student);
-      res.status(201).send(student.getDetails());
+    app.post('/students', (req, res) => {  //Define una ruta POST para manejar el registro de nuevos estudiantes.
+      const { name, email, average } = req.body;   //Extrae name, email, y average del cuerpo de la solicitud (req.body).
+      const student = new Student(name, email, average);  //Crea una nueva instancia de Student con los datos proporcionados.
+      students.push(student);   //Añade la nueva instancia de estudiante a la lista students.
+      res.status(201).send(student.getDetails());  //Responde con los detalles del estudiante registrado y un código de estado 201 (Creado).
     });
 
     // Iniciar el servidor en el puerto 3000
