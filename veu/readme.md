@@ -85,6 +85,55 @@ Vamos a crear nuestra primera instancia de Vue para entender cómo funciona:
     </body>
     </html>
 
+otro ejemplo:
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejemplo de v-for y v-if en Vue.js</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+</head>
+<body>
+  <div id="app">
+    <h1>Lista de Nombres</h1>
+
+    <!-- Input para ingresar un nuevo nombre -->
+    <input v-model="nuevoNombre" placeholder="Escribe un nombre" />
+    <button @click="agregarNombre">Agregar Nombre</button>
+
+    <!-- Lista de nombres -->
+    <ul>
+      <li v-for="(nombre, index) in nombres" :key="index">{{ nombre }}</li>
+    </ul>
+
+    <!-- Mensaje si la lista está vacía -->
+    <p v-if="nombres.length === 0">No hay nombres en la lista.</p>
+  </div>
+
+  <script>
+    // Inicializando una nueva instancia de Vue
+    new Vue({
+      el: '#app',
+      data: {
+        nuevoNombre: '', // Almacena el nuevo nombre ingresado
+        nombres: [] // Arreglo donde se almacenarán los nombres
+      },
+      methods: {
+        agregarNombre() {
+          // Verifica si el campo de entrada no está vacío
+          if (this.nuevoNombre.trim() !== '') {
+            this.nombres.push(this.nuevoNombre); // Agrega el nombre al arreglo
+            this.nuevoNombre = ''; // Limpia el campo de entrada
+          }
+        }
+      }
+    });
+  </script>
+</body>
+</html>
+
 Ahora crearemos la pagina principal del proyecto alumno con Veu
 
     <!DOCTYPE html>
