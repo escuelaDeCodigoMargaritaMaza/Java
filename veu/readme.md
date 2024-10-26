@@ -145,9 +145,9 @@ Ahora crearemos la pagina principal del proyecto alumno con Veu
 
 en html
 
-<div id="app">: Este es el elemento al que Vue se va a montar.
+div id="app": Este es el elemento al que Vue se va a montar.
 
-<form @submit.prevent="registrarEstudiante">: Vincula la función registrarEstudiante al evento de envío del formulario.
+form @submit.prevent="registrarEstudiante": Vincula la función registrarEstudiante al evento de envío del formulario.
 
 v-model: Bindea los campos del formulario con las propiedades de Vue (name, email, average).
 
