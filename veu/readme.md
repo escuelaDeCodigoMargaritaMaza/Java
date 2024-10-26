@@ -62,10 +62,10 @@ Vamos a crear nuestra primera instancia de Vue para entender cómo funciona:
     </head>
     <body>
       <div id="app">
-        <h1>{{ mensaje }}</h1>  Vincula la variable mensaje del objeto data al DOM
-        <button @click="contador++">Incrementar</button>  es una directiva en Vue.js que se utiliza para agregar controladores de eventos a elementos HTML. Incrementa el valor de contador 
-        <button @click="resetear">Resetear</button>   Llama al método resetear para restablecer el contador.
-        <p>El contador está en: {{ contador }}</p>   Vincula la variable contador del objeto data al DOM.
+        <h1>{{ mensaje }}</h1>  <!-- Vincula la variable mensaje del objeto data al DOM -->
+        <button @click="contador++">Incrementar</button> <!-- es una directiva en Vue.js que se utiliza para agregar controladores de eventos a elementos HTML. Incrementa el valor de contador -->
+        <button @click="resetear">Resetear</button> <!--Llama al método resetear para restablecer el contador. --> 
+        <p>El contador está en: {{ contador }}</p>  <!--Vincula la variable contador del objeto data al DOM. --> 
       </div>
     
       <script>
