@@ -84,3 +84,81 @@ Vamos a crear nuestra primera instancia de Vue para entender cómo funciona:
       </script>
     </body>
     </html>
+
+Ahora crearemos la pagina principal del proyecto alumno con Veu
+
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+      <meta charset="UTF-8">
+      <title>Registro de Estudiantes</title>
+      <!-- Incluir Vue.js desde CDN -->
+      <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    </head>
+    <body>
+      <div id="app">
+        <h1>¡Bienvenido a mi sitio web!</h1>
+        <p>Esta es una pagina frontend con veu.</p>
+    
+        <h2>Registro de Estudiantes</h2>
+        <form @submit.prevent="registrarEstudiante">
+          <input type="text" v-model="name" placeholder="Nombre" required><br>
+          <input type="email" v-model="email" placeholder="Correo Electrónico" required><br>
+          <input type="number" v-model="average" placeholder="Promedio" required step="0.01"><br>
+          <button type="submit">Registrar</button>
+        </form>
+        <div v-if="student">
+          <h3>Estudiante Registrado:</h3>
+          <p>Nombre: {{ student.name }}</p>
+          <p>Correo: {{ student.email }}</p>
+          <p>Promedio: {{ student.average }}</p>
+        </div>
+      </div>
+    
+      <script>
+        new Vue({
+          el: '#app',
+          data: {
+            name: '',
+            email: '',
+            average: '',
+            student: null
+          },
+          methods: {
+            async registrarEstudiante() {
+              const response = await fetch('/students', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ name: this.name, email: this.email, average: this.average })
+              });
+              this.student = await response.json();
+              // Limpiar formulario
+              this.name = '';
+              this.email = '';
+              this.average = '';
+            }
+          }
+        });
+      </script>
+    </body>
+    </html>
+
+en html
+
+<div id="app">: Este es el elemento al que Vue se va a montar.
+
+<form @submit.prevent="registrarEstudiante">: Vincula la función registrarEstudiante al evento de envío del formulario.
+
+v-model: Bindea los campos del formulario con las propiedades de Vue (name, email, average).
+
+v-if="student": Muestra la información del estudiante registrado si existe (student no es null).
+
+en el script
+
+new Vue({ ... }): Crea una nueva instancia de Vue.
+
+el: '#app': Monta Vue en el elemento con ID app.
+
+data: { ... }: Define el estado reactivo de Vue, con propiedades para name, email, average y student.
+
+methods: { ... }: Define métodos que se pueden llamar desde el HTML. Aquí, registrarEstudiante maneja el envío del formulario, envía una solicitud POST al servidor y actualiza la propiedad student con la respuesta del servidor. También resetea los campos del formulario.
