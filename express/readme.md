@@ -156,6 +156,27 @@ Actualiza app.js
       console.log('Servidor corriendo en http://localhost:3000');
     });
 
+Ahora creamos la clase Student que permitira crear los objetos alumnos, crea un archivo Student.js
+
+        // Student.js
+        class Student {
+            constructor(name, email, average) {
+              this.name = name;
+              this.email = email;
+              this.average = average;
+            }
+          
+            getDetails() {
+              return {
+                name: this.name,
+                email: this.email,
+                average: this.average
+              };
+            }
+          }
+          
+          module.exports = Student;
+
 json
 
     {
